@@ -1,0 +1,13 @@
+name: 'Admin toolbar version'
+type: module
+description: 'Adds version info to the admin toolbar tools menu'
+package: Administration
+# version: 1.0.0
+core_version_requirement: ^8.8 || ^9 || ^10
+dependencies:
+  - admin_toolbar:admin_toolbar_tools
+
+# Information added by Drupal.org packaging script on 2023-02-14
+version: '1.0.3'
+project: 'admin_toolbar_version'
+datestamp: 1676375182
