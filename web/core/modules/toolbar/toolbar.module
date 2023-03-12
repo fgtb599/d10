@@ -141,7 +141,7 @@ function toolbar_toolbar() {
     '#type' => 'toolbar_item',
     'tab' => [
       '#type' => 'link',
-      '#title' => t('Back to website'),
+      '#title' => t('Back to site'),
       '#url' => Url::fromRoute('<front>'),
       '#attributes' => [
         'title' => t('Return to site content'),

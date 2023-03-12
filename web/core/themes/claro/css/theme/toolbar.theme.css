@@ -31,7 +31,7 @@
 }
 .toolbar .toolbar-item:hover,
 .toolbar .toolbar-item:focus {
-  text-decoration: underline;
+  font-weight: bold;
 }
 /**
  * Toolbar bar.
@@ -101,7 +101,7 @@
 .toolbar-tray a:active,
 .toolbar-tray a:focus,
 .toolbar-tray a.is-active {
-  text-decoration: underline;
+  font-weight: bold;
   color: #000;
 }
 .toolbar .toolbar-menu {

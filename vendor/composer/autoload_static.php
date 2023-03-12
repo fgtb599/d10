@@ -33,6 +33,10 @@ class ComposerStaticInit85877956412d105d0d0378a9ab86ad7f
             'phootwork\\lang\\' => 15,
             'phootwork\\collection\\' => 21,
         ),
+        'c' => 
+        array (
+            'cweagans\\Composer\\' => 18,
+        ),
         'T' => 
         array (
             'Twig\\' => 5,
@@ -148,6 +152,10 @@ class ComposerStaticInit85877956412d105d0d0378a9ab86ad7f
         'phootwork\\collection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phootwork/collection',
+        ),
+        'cweagans\\Composer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/cweagans/composer-patches/src',
         ),
         'Twig\\' => 
         array (

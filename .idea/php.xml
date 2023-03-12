@@ -88,6 +88,7 @@
       <path value="$PROJECT_DIR$/vendor/consolidation/config" />
       <path value="$PROJECT_DIR$/vendor/psr/log" />
       <path value="$PROJECT_DIR$/vendor/consolidation/robo" />
+      <path value="$PROJECT_DIR$/vendor/cweagans/composer-patches" />
     </include_path>
   </component>
   <component name="PhpInterpreters">
