@@ -1,0 +1,17 @@
+uuid: 7f0b2016-920d-483d-96ed-4b50cb30c959
+langcode: en
+status: false
+dependencies: {  }
+id: dev
+label: dev
+description: ''
+weight: 0
+folder: ../config/dev
+module:
+  admin_toolbar_version: 0
+theme: {  }
+blacklist:
+  - core.extension
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true

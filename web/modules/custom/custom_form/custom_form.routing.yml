@@ -5,3 +5,11 @@ custom_form.form:
     _title: 'My Form'
   requirements:
     _permission: 'access content'
+
+custom_form.settings:
+  path: '/custom_form/settings'
+  defaults:
+    _form: '\Drupal\custom_form\Form\JustConfigForm'
+    _title: 'Custom form settings'
+  requirements:
+    _permission: 'administer site configuration'
