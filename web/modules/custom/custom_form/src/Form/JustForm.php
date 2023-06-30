@@ -69,7 +69,7 @@ class JustForm extends FormBase {
       $data = [
         'time' => $time,
       ];
-      $this->cache->set('form:custom_form', $data, CacheBackendInterface::CACHE_PERMANENT);
+      $this->cache->set('form:custom_form', $data, CacheBackendInterface::CACHE_PERMANENT, ['node:1']);
     }
 
     if ($form_state->getTriggeringElement()['#name'] == 'delete') {
