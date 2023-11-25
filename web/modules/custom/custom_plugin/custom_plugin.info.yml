@@ -1,4 +1,4 @@
-name: Costum Plugin
+name: Custom Plugin
 type: module
 description: Provides additional functionality for the site.
 package: Custom

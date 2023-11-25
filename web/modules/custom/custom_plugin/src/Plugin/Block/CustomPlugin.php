@@ -2,6 +2,7 @@
 
 namespace Drupal\custom_plugin\Plugin\Block;
 
+use Drupal\Core\Block\Annotation\Block;
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Url;
 
