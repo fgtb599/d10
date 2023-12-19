@@ -2,6 +2,7 @@
 
 namespace Drupal\custom_form\Form;
 
+use Drupal\node\Entity\Node;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Cache\CacheBackendInterface;
 use Drupal\Core\Form\FormBase;
@@ -35,24 +36,49 @@ class JustForm extends FormBase {
     );
   }
 
-  public function buildForm(array $form, FormStateInterface $form_state) {
+  public function buildForm(array $form, FormStateInterface $form_state): array {
 
     $form_cache = $this->cache->get('form:custom_form');
 
     $form_cache = $form_cache->data['time'] ?? 'None';
 
-    $form['cache'] = [
+    $entity_type_manager = \Drupal::service('entity_type.manager');
+    $query = $entity_type_manager->getStorage('node')->getQuery();
+    $query->condition('langcode', 'en');
+    $query->accessCheck(FALSE);
+    $query->range(0, 50);
+    $query->sort('nid');
+    $node_ids = $query->execute();
+
+    if ($node_ids) {
+      $form['entity_container'] = [
+        '#type' => 'container',
+      ];
+      foreach ($node_ids as $id) {
+        $node = Node::load($id);
+        $form['entity_container'][$id] = [
+          '#type' => 'item',
+          '#title' => "ID: $id, Title: {$node?->getTitle()}, Bundle: {$node?->bundle()}",
+        ];
+
+      }
+    }
+    $form['cache_container'] = [
+      '#type' => 'container',
+    ];
+
+    $form['cache_container']['cache'] = [
       '#type' => 'markup',
       '#markup' => "Form cache: $form_cache</br>",
     ];
 
-    $form['set'] = [
+    $form['cache_container']['set'] = [
       '#type' => 'submit',
       '#name' => 'set',
       '#value' => $this->t('Set'),
     ];
 
-    $form['delete'] = [
+    $form['cache_container']['delete'] = [
       '#type' => 'submit',
       '#name' => 'delete',
       '#value' => $this->t('Delete'),
