@@ -1,0 +1,5 @@
+name: Custom Middleware
+type: module
+description: Provides custom middleware functionality for the site.
+package: Custom
+core_version_requirement: ^9 || ^10

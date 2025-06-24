@@ -1,0 +1,5 @@
+services:
+  custom_middleware.service:
+    class: Drupal\custom_middleware\Service\CustomMiddleware
+    tags:
+      - { name: http_middleware, priority: 450 }
